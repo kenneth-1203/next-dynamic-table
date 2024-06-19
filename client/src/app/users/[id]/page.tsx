@@ -35,29 +35,29 @@ export default async function Page({ params }: Props) {
   return (
     <main className="flex min-h-[calc(100vh-80px)] items-center justify-center gap-4">
       <Avatar className="w-52 h-52 m-4 rounded-3xl">
-        <AvatarFallback className="font-semibold text-6xl rounded-3xl">
+        <AvatarFallback className="font-semibold text-6xl rounded-3xl bg-primary/10 text-sky-900">
           {getInitials(user.name)}
         </AvatarFallback>
       </Avatar>
       <div>
-        <div className="grid grid-cols-5 border-b last:border-0">
-          <p className="col-span-1 border-r last:border-0 p-2">ID:</p>
+        <div className="grid grid-cols-5 border-b border-primary/50 last:border-0">
+          <p className="col-span-1 border-r border-primary/50 last:border-0 p-2">ID:</p>
           <p className="col-span-4 p-2">{user.id}</p>
         </div>
-        <div className="grid grid-cols-5 border-b last:border-0">
-          <p className="col-span-1 border-r last:border-0 p-2">Name:</p>
+        <div className="grid grid-cols-5 border-b border-primary/50 last:border-0">
+          <p className="col-span-1 border-r border-primary/50 last:border-0 p-2">Name:</p>
           <p className="col-span-4 p-2">{user.name}</p>
         </div>
-        <div className="grid grid-cols-5 border-b last:border-0">
-          <p className="col-span-1 border-r last:border-0 p-2">Email:</p>
+        <div className="grid grid-cols-5 border-b border-primary/50 last:border-0">
+          <p className="col-span-1 border-r border-primary/50 last:border-0 p-2">Email:</p>
           <p className="col-span-4 p-2">{user.email}</p>
         </div>
-        <div className="grid grid-cols-5 border-b last:border-0">
-          <p className="col-span-1 border-r last:border-0 p-2">Phone:</p>
+        <div className="grid grid-cols-5 border-b border-primary/50 last:border-0">
+          <p className="col-span-1 border-r border-primary/50 last:border-0 p-2">Phone:</p>
           <p className="col-span-4 p-2">{user.phone}</p>
         </div>
-        <div className="grid grid-cols-5 border-b last:border-0">
-          <p className="col-span-1 border-r last:border-0 p-2">Address:</p>
+        <div className="grid grid-cols-5 border-b border-primary/50 last:border-0">
+          <p className="col-span-1 border-r border-primary/50 last:border-0 p-2">Address:</p>
           <p className="col-span-4 p-2">{user.address}</p>
         </div>
       </div>

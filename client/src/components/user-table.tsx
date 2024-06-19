@@ -61,21 +61,21 @@ const UserTable = ({ usersData }: { usersData: UserData }) => {
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-      <Table className="border-t">
+      <Table className="border-t border-primary/50">
         <TableHeader>
-          <TableRow>
-            <TableHead className="w-[100px]">ID</TableHead>
-            <TableHead>Name</TableHead>
-            <TableHead>Email</TableHead>
-            <TableHead>Phone</TableHead>
-            <TableHead className="text-right">Address</TableHead>
+          <TableRow className="border-primary/50">
+            <TableHead className="font-semibold w-[100px]">ID</TableHead>
+            <TableHead className="font-semibold">Name</TableHead>
+            <TableHead className="font-semibold">Email</TableHead>
+            <TableHead className="font-semibold">Phone</TableHead>
+            <TableHead className="font-semibold text-right">Address</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {filteredUsers.length > 0 ? (
             filteredUsers.map((user) => (
               <TableRow
-                className="cursor-pointer"
+                className="cursor-pointer border-primary/50 text-sky-900"
                 key={user.id}
                 onClick={() => navigate(user.id)}
               >
@@ -99,7 +99,7 @@ const UserTable = ({ usersData }: { usersData: UserData }) => {
         </TableBody>
       </Table>
       {usersData && (
-        <Pagination className="border-t p-2">
+        <Pagination className="border-t border-primary/50 p-2">
           <PaginationContent>
             <PaginationItem onClick={() => paginate("prev")}>
               <PaginationPrevious
@@ -113,6 +113,7 @@ const UserTable = ({ usersData }: { usersData: UserData }) => {
             {Array.from({ length: usersData.totalPages }, (_, index) => (
               <PaginationItem key={index}>
                 <PaginationLink
+                  className="border-primary/50 text-sky-900"
                   onClick={() => router.push(`?page=${index + 1}`)}
                   isActive={index + 1 === usersData.page}
                 >
