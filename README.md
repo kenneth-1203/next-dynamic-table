@@ -34,3 +34,23 @@ Create a web application using React Typescript, Next.js, and Tailwind CSS that 
 
 ## Deliverables
 GitHub repository link with the completed project.
+
+## Installation
+Install the client dependencies
+```
+cd client
+npm install
+```
+Then run
+```
+npm run dev
+```
+Install the server dependencies
+```
+cd server
+npm install
+```
+Then run
+```
+npm run dev
+```

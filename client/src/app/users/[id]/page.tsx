@@ -28,7 +28,6 @@ export default async function Page({ params }: Props) {
   if (!user) return notFound();
 
   const getInitials = (name: string) => {
-    console.log(name)
     const names = name.split(" ");
     return names[0][0].toUpperCase() + names[1][0].toUpperCase();
   };
